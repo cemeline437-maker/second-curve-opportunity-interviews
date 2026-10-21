@@ -3,6 +3,90 @@
 **版本**：1.1.0（2026-10-21；原 v1.0 包另行保留）  
 **适用**：尚无明确产品、对用户研究不熟悉、手上只有初步商业想法或简略精益画布的学员；可研究副业、创业、改行、拓展新执业领域。
 
+## 选择你的 Agent，一句安装
+
+这是**独立 Skill、独立仓库**，不需要安装平行人生或优势发掘器。
+
+| 你使用的工具 | 最短入口 |
+| --- | --- |
+| Codex（可操作本地文件） | [复制 Codex 一句安装指令](#codex) |
+| Claude Code | [复制 Claude Code 一句安装指令](#claude-code) |
+| Cursor | [复制 Cursor 一句安装指令](#cursor) |
+| WorkBuddy | [复制 WorkBuddy 一句安装指令](#workbuddy) |
+| Claude 网页版 | [下载完整 ZIP](https://github.com/cemeline437-maker/second-curve-opportunity-interviews/raw/main/dist/second-curve-opportunity-interviews.zip)，在支持自定义 Skills 的设置中上传启用 |
+
+下面的自然语言发给对应 Agent；命令行方式在终端执行。安装后新开对话或刷新技能列表。安装器完成不等于 Agent 已发现：需确认文件中的 `name` 为 `second-curve-opportunity-interviews`、版本为 `1.1.0`，再确认技能列表可见。
+
+### Codex
+
+复制这一句发给 Codex：
+
+```text
+请从 https://github.com/cemeline437-maker/second-curve-opportunity-interviews 为当前用户安装 second-curve-opportunity-interviews Skill，执行 npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a codex --copy -y；已有同名 Skill 时先告诉我，不直接覆盖，完成后核对 name、1.1.0 版本和完整模板文件，并确认新对话中可发现再开始使用。
+```
+
+或一行终端命令：
+
+```bash
+npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a codex --copy -y
+```
+
+### Claude Code
+
+复制这一句发给 Claude Code：
+
+```text
+请从 https://github.com/cemeline437-maker/second-curve-opportunity-interviews 为当前用户安装 second-curve-opportunity-interviews Skill，执行 npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a claude-code --copy -y；已有同名 Skill 时先告诉我，不直接覆盖，完成后核对 name、1.1.0 版本和完整模板文件，并确认新对话中可发现再开始使用。
+```
+
+或一行终端命令：
+
+```bash
+npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a claude-code --copy -y
+```
+
+### Cursor
+
+复制这一句发给 Cursor Agent：
+
+```text
+请从 https://github.com/cemeline437-maker/second-curve-opportunity-interviews 为当前用户安装 second-curve-opportunity-interviews Skill，执行 npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a cursor --copy -y；已有同名 Skill 时先告诉我，不直接覆盖，完成后核对 name、1.1.0 版本和完整模板文件，并确认新对话中可发现再开始使用。
+```
+
+或一行终端命令：
+
+```bash
+npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a cursor --copy -y
+```
+
+以上命令需要 Node.js、npm/npx 和 Git；`skills` 是第三方开源安装器。若电脑尚未安装依赖，让 Agent 先说明缺少什么。`-g` 表示当前用户可跨项目使用；只装当前项目时删去 `-g`。
+
+### WorkBuddy
+
+复制这一句发给 WorkBuddy（通过 GitHub 安装，不依赖 SkillHub 审核完成）：
+
+```text
+请从 https://github.com/cemeline437-maker/second-curve-opportunity-interviews 安装 second-curve-opportunity-interviews Skill 到当前用户的 ~/.workbuddy/skills/second-curve-opportunity-interviews，使用 Git 克隆完整仓库，已有同名目录时先告诉我，不直接覆盖；完成后核对 SKILL.md 的 name、1.1.0 版本及 references/、assets/ 文件，并提示刷新技能列表，确认可发现后再使用。
+```
+
+或一行终端命令（macOS / Linux；需要 Git，目标目录须不存在）：
+
+```bash
+git clone --depth 1 https://github.com/cemeline437-maker/second-curve-opportunity-interviews.git "$HOME/.workbuddy/skills/second-curve-opportunity-interviews"
+```
+
+也可到 [SkillHub 独立页面](https://skillhub.cn/skills/user_ef208136/second-curve-opportunity-interviews) 使用“安装到本地 Agent”；**须以页面实际审核状态为准**，审核中时不保证概述、下载或安装可用。
+
+### 只有聊天、没有本地安装能力时
+
+普通聊天界面不能仅凭一句话就保证永久安装。Claude 账号支持自定义 Skills 时，下载 [完整 ZIP](https://github.com/cemeline437-maker/second-curve-opportunity-interviews/raw/main/dist/second-curve-opportunity-interviews.zip) 并在 Skills 设置上传启用；其他支持 ZIP 的工具也可用该包。不要把“读取仓库”或“普通聊天附件上传”称为已经安装。更多细节见 [安装说明](docs/installation.md)。
+
+安装后开始用：
+
+```text
+请用 NextMe 机会探索型用户访谈 Skill，陪我从模糊想法设计一轮机会探索；一次只问我一两个问题，目标明确后默认交付完整定制研究计划。
+```
+
 ## 它做什么
 
 它**不是**一个“输入赛道→吐出 20 个访谈问题”的提示词。它陪学员从模糊想法构建**研究任务卡**、区分证据与假设、选择可触达受访者、拟定三种招募文案、定制半结构机会探索提纲、做好现场记录、试访复盘，并在学员**先独立写出固定三点印象（与证据复盘不同）**后，利用获授权的材料进行证据综合，保留人机分歧，落地成一个最优先下一步。

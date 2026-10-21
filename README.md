@@ -9,13 +9,51 @@
 
 | 你使用的工具 | 最短入口 |
 | --- | --- |
+| **ChatGPT 电脑客户端（Work）** | [复制 ChatGPT 一句安装指令](#chatgpt-电脑客户端work)；不用切到 Codex，不用上架官方插件目录 |
+| **Claude 客户端 / 网页版** | [上传 ZIP 并启用](#claude-客户端--网页版)；**不需要 Claude Code** |
 | Codex（可操作本地文件） | [复制 Codex 一句安装指令](#codex) |
 | Claude Code | [复制 Claude Code 一句安装指令](#claude-code) |
 | Cursor | [复制 Cursor 一句安装指令](#cursor) |
 | WorkBuddy | [复制 WorkBuddy 一句安装指令](#workbuddy) |
-| Claude 网页版 | [下载完整 ZIP](https://github.com/cemeline437-maker/second-curve-opportunity-interviews/raw/main/dist/second-curve-opportunity-interviews.zip)，在支持自定义 Skills 的设置中上传启用 |
 
 下面的自然语言发给对应 Agent；命令行方式在终端执行。安装后新开对话或刷新技能列表。安装器完成不等于 Agent 已发现：需确认文件中的 `name` 为 `second-curve-opportunity-interviews`、版本为 `1.1.0`，再确认技能列表可见。
+
+### ChatGPT 电脑客户端（Work）
+
+**适合直接使用 ChatGPT 的学员，不要求会编程或使用 Codex。** 在 ChatGPT 电脑客户端，选择 ChatGPT，再把输入框上方的模式从 Chat 切换到 **Work**。安装需使用能访问本机文件的 Work 环境；只有云端容器、未连接这台电脑的环境不能替你完成本机安装。
+
+复制这一句发给 ChatGPT（普通聊天里发送也会先得到切换提示）：
+
+```text
+请安装并使用 NextMe 机会探索型用户访谈 Skill，按 https://raw.githubusercontent.com/cemeline437-maker/second-curve-opportunity-interviews/main/docs/install-chatgpt.md 操作；如果当前是普通 Chat 聊天，或不能访问这台电脑的文件，请先提示我在 ChatGPT 电脑客户端切换到 Work 并使用可访问本机的环境，再重新发送本句，先不要开始访谈，也不要说安装成功。
+```
+
+Work 中实际使用的一行安装命令与 Codex 共用：
+
+```bash
+npx --yes skills add https://github.com/cemeline437-maker/second-curve-opportunity-interviews --skill second-curve-opportunity-interviews -g -a codex --copy -y
+```
+
+`-a codex` 是第三方安装器的目标名称，安装的是电脑上的本地 Skill 文件，**不表示必须进入 Codex 界面**。接收方需核对实际安装目录；当前目标是用户的 `~/.agents/skills/second-curve-opportunity-interviews/`。安装后新开 Work 对话，在可用的 Skills 列表或 `@` 菜单中确认该 Skill 可见，再开始使用。只下载或落盘还不能宣称客户端已启用。
+
+如果没看到 Work、Skills，或无法连接本机，请先更新客户端并检查账号/工作区是否开放该能力；不要把云端临时目录当作本机，也不要声称普通聊天发一句话就已永久安装。这个本地分发方式**不要求上架 ChatGPT 官方插件目录**。详见 [ChatGPT 安装与切换说明](docs/install-chatgpt.md)。
+
+### Claude 客户端 / 网页版
+
+**Claude 和 Claude Code 都可以用；Claude 客户端不需要安装 Claude Code，也不需要执行下面的 Claude Code 命令。**
+
+1. [下载完整 Skill ZIP](https://github.com/cemeline437-maker/second-curve-opportunity-interviews/raw/main/dist/second-curve-opportunity-interviews.zip)。
+2. 在 Claude 中打开 **Customize（自定义）→ Skills → ＋ → Create skill → Upload a skill**。
+3. 上传 ZIP 并启用；在 Settings → Capabilities 中确保 **Code execution and file creation** 已开启。
+4. 新开聊天，请 Claude 使用 `second-curve-opportunity-interviews`；先确认该 Skill 可用。
+
+若桌面客户端没有该入口，可在同一账号的 Claude 网页版操作；团队账号可能需要管理员开放创建/上传权限。将 ZIP 发到普通聊天附件中不等于安装到 Skills。
+
+也可以把这一句发给 Claude 客户端，让它协助引导：
+
+```text
+请帮我启用 NextMe 机会探索型用户访谈 Skill，安装包是 https://github.com/cemeline437-maker/second-curve-opportunity-interviews/raw/main/dist/second-curve-opportunity-interviews.zip；我使用 Claude 客户端，请引导我在 Customize → Skills 上传 ZIP 并启用，不要让我安装 Claude Code，也不要把普通聊天附件当成已安装。
+```
 
 ### Codex
 
@@ -79,12 +117,12 @@ git clone --depth 1 https://github.com/cemeline437-maker/second-curve-opportunit
 
 ### 只有聊天、没有本地安装能力时
 
-普通聊天界面不能仅凭一句话就保证永久安装。Claude 账号支持自定义 Skills 时，下载 [完整 ZIP](https://github.com/cemeline437-maker/second-curve-opportunity-interviews/raw/main/dist/second-curve-opportunity-interviews.zip) 并在 Skills 设置上传启用；其他支持 ZIP 的工具也可用该包。不要把“读取仓库”或“普通聊天附件上传”称为已经安装。更多细节见 [安装说明](docs/installation.md)。
+ChatGPT 普通 Chat 聊天请按上文提示切换到电脑客户端的 Work；Claude 客户端请在 Customize → Skills 上传 ZIP。两者的入口不同。不要把“读取仓库”或“普通聊天附件上传”称为已经安装。更多细节见 [安装说明](docs/installation.md)。
 
 安装后开始用：
 
 ```text
-请用 NextMe 机会探索型用户访谈 Skill，陪我从模糊想法设计一轮机会探索；一次只问我一两个问题，目标明确后默认交付完整定制研究计划。
+请用已安装的 NextMe 机会探索型用户访谈 Skill，陪我从模糊想法设计一轮机会探索；如果当前是 ChatGPT 普通 Chat 聊天，请先提醒我切换到电脑客户端的 Work 并重新发送本句，不要先开始访谈；准备好后一次只问我一两个问题，目标明确后默认交付完整定制研究计划。
 ```
 
 ## 它做什么
